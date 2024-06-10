@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Preloader Example</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+</style>
+</head>
+<body>
+<div id="preloader">
+<img src="final rotonda_1.gif">
+</div>
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('#preloader').fadeOut('slow', function() {
+                window.location.href = 'wordpress'; // Change 'nextpage.html' to your next page URL
+            });
+        }, 10000); // 5000 milliseconds = 5 seconds
+    });
+</script>
+</body>
+</html>
